@@ -5,22 +5,25 @@ HAUL1 can also translate its own source code into other languages. It is kept si
 
 Oh, and it comes with *ShadowRunner*, a simple VM that is written in *HAL* and which can be programmed for using *HAL*. A nice strange loop, don't you think?
 
+This project has been superseded by [HAUL2](https://github.com/hotkeymuc/haul2) and [HAUL3](https://github.com/hotkeymuc/haul3) which are written in Python and come with more powerful lexers and parsers.
+
+
 ## Features and Limitations
-* = "Flat" translation: no lexer, compiler - just a simple text-translator
-* = First word in each line is always the command, then tab separated parameters
-* = Written in PHP :-(
-* + Some kind of structure/state while parsing (instructions, expressions, ...), but no "understanding" of the code
-* + OOP (HTKs are classes)
-* + Sample Code: "shadowRunner" - a small VM
-* + "HYBERnation" - Programs can store their state across translations!
-* + Goodie: SR1 can convert HAL to shadowRunner byte code!!! YO DAWG!!! Recursion galore! The system can translate itself to a language it can interpret itself... wow.
-* ! Works great for what it does!!!
-* = 600 lines (12kb) per output kernel
-* - Language is really ugly (an "assembler php hate child") - no nested expressions, looks repetitive
-* - Needs a boot-strapper to initially translate itself to an executable language (translateOnce.php)
-* - limited syntax (assembler like - the worst quirks of all output languages combined!)
-* - parsing is a bit messy, since we have no syntax tree
-* - Can only output languages that are similar in their syntactic structure (PHP, Python, JS, VBS, ...)
+* "Flat" translation: no lexer, compiler or AST - just a simple text-translator
+* First word in each line is always the command, followed by tab separated parameters
+* Written in PHP :-(
+* Some kind of structure/state while parsing (instructions, expressions, ...), but no "understanding" of the code
+* OOP (HTKs are classes)
+* Sample Code: "shadowRunner" - a small VM
+* "HYBERnation" - Programs can store their state across translations!
+* Goodie: SR1 can convert HAL to shadowRunner byte code!! "YO DAWG! I HEARD YOU LIKE POLYMORPHISM..."
+* Works great for what it does!
+* roughly 600 lines (12kb) per translation kernel
+* Language is really ugly (an "assembler php hate child") - no nested expressions, looks repetitive, generally unpleasant to code in.
+* Needs a boot-strapper to initially translate itself to an executable language (translateOnce.php)
+* limited syntax (assembler like - the worst quirks of all output languages combined!)
+* parsing is a bit messy, since we have no syntax tree
+* Can only output languages that are similar in their syntactic structure (PHP, Python, JS, VBS, ...)
 > Maybe some sort of syntax tree is not bad after all... Especially for binary output.
 
 
